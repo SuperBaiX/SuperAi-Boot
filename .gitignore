@@ -34,8 +34,13 @@ build/
 
 
 #忽略配置文件
+*.yml
 **/application*.yml
 **/config/*.properties
+*.application.yml
+application-dev.yml
+application-prod.yml
+/logs
 
 
 #防范IDE生成文件（通用模板）
