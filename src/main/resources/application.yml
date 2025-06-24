@@ -22,8 +22,8 @@ spring:
 
 #milvus??
 milvus:
-  host: https://in03-396a908b28d0572.serverless.gcp-us-west1.cloud.zilliz.com
-  port: 80
+  host:
+  port:
 
 # OpenAi??
 openai:
