@@ -5,5 +5,12 @@ package com.superai.core.llm;
  * @description : T
  * @created : 2025/6/24
  **/
-public class LLMService {
+public interface LLMService {
+
+    /**
+     * 生成对话
+     * @param prompt 提示词
+     * @return
+     */
+    public String generateResponse(String prompt);
 }

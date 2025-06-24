@@ -6,4 +6,6 @@ package com.superai.service;
  * @created : 2025/6/24
  **/
 public interface ChatService {
+
+     String getChat(String question);
 }
