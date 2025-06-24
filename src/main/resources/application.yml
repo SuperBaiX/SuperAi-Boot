@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/superai?useSSL=false&serverTimezone=UTC&characterEncoding=utf8
+    username: root
+    password: root
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+#mybatis-plus ??
+#mybatis-plus:
+#  configuration:
+#    map-underscore-to-camel-case: true #??????
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #????
+#  mapper-locations: classpath*:/mapper/**/*.xml #xml????
+
+#milvus??
+milvus:
+  host: https://in03-396a908b28d0572.serverless.gcp-us-west1.cloud.zilliz.com
+  port: 80
+
+# OpenAi??
+openai:
+  api-key:
+
+#??????
+file:
+  storage-dir: ./uploadedFiles
+
+#Ai????
+ai:
+  enhancement:
+    enabled: true  # ????AI????
+    models:
+      text:
+        default: gpt-3.5-turbo
+        long-text: claude-2
+        medical: med-palm
+        legal: law-gpt
+      image:
+        default: clip
+        diagram: nougat
+    thresholds:
+      max-pages: 50       # ??PDF?????
+      min-text-length: 100 # ???????????
+
+# ?????
+parser:
+  chunk-size: 500        # ??????
+  smart-chunking: true    # ???????????AI???
